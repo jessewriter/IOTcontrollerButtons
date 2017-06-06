@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                Snackbar.make(view, "Replace with your own action (will open https://www.linkedin.com/in/mrjesseboyd)", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "(will open https://www.linkedin.com/in/mrjesseboyd)", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
                 //delay the intent
@@ -243,21 +243,23 @@ public class MainActivity extends AppCompatActivity {
 
     private SeekBar.OnSeekBarChangeListener sliderControl = new
             SeekBar.OnSeekBarChangeListener() {
+                int freqProgress =0;
                 @Override
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                    frequency = progress;  // set frequency
-                    Toast.makeText(getApplicationContext(), "slider value:  " + progress, Toast.LENGTH_SHORT).show();
-                    Log.d(tag, "slider value = " + progress);
+                    freqProgress = progress;  // set frequency
+
                 }
 
                 @Override
                 public void onStartTrackingTouch(SeekBar seekBar) {
-
+                    Log.d(tag, "on start tracking touch = " + frequency);
                 }
 
                 @Override
                 public void onStopTrackingTouch(SeekBar seekBar) {
-
+                    frequency = freqProgress;
+                    Toast.makeText(getApplicationContext(), "slider value:  " + frequency, Toast.LENGTH_SHORT).show();
+                    Log.d(tag, "on stop tracking touch = " + frequency);
                 }
             };
 
