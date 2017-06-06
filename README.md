@@ -13,4 +13,4 @@ All Android programming is done in Android Studio with Java programming language
 
 I would like the app to look prettier but function comes before beauty at least in my work-flow.  Beauty is essential for adoption and that is how I feel about most apps.
 
-![ScreenShot]({https://goo.gl/photos/7A4cU3zZMk2oJArr7})
+![iot button app screenshot](https://cloud.githubusercontent.com/assets/16365134/26814341/b6a8f214-4a39-11e7-8fc9-484bbe8e36d9.png)
