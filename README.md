@@ -16,4 +16,4 @@ I would like the app to look prettier but function comes before beauty at least 
 In image I just slid the slider to show the Toast message of the slider value.  To get that to register in the cloud you must click CHANGE.  To pull down the latest data from the cloud click UPDATE, note that the free version of Heroku puts my app to sleep so you may have to click update a few times before the data pulls down, be patient, after that it runs smoothly.
 
 
-![screenshot_20170605-221335](https://cloud.githubusercontent.com/assets/16365134/26814714/78088dd2-4a3c-11e7-939d-929f11150750.png)
+![screenshot_20170605-221335](https://goo.gl/photos/v82FWGyghZYCLoir9)
