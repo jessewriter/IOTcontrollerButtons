@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/fire"
+    android:background=""
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.iot.jesseboyd.iotcontrollerbuttons.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -25,10 +26,9 @@
         android:id="@+id/isOnButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
         android:text="@string/togglebutton"
-        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -46,14 +46,15 @@
         android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="@+id/isOnButton"
         app:layout_constraintTop_toBottomOf="@+id/isOnButton"
-        tools:ignore="HardcodedText,LabelFor,RtlHardcoded" />
+        tools:ignore="HardcodedText,LabelFor,RtlHardcoded"
+        android:layout_marginStart="0dp" />
 
 
     <SeekBar
         android:id="@+id/frequencySeekBar"
         android:layout_width="213dp"
         android:layout_height="24dp"
-        android:layout_marginStart="1dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="15dp"
         android:background="@android:color/background_light"
         android:labelFor="@+id/frequency"
@@ -103,9 +104,10 @@
         app:layout_constraintLeft_toLeftOf="@+id/frequencySeekBar"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frequencySeekBar"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.073"
         android:layout_marginLeft="8dp"
-        tools:ignore="RtlHardcoded" />
+        tools:ignore="RtlHardcoded"
+        android:layout_marginStart="0dp" />
 
     <Button
         android:id="@+id/changeButton"
@@ -153,23 +155,23 @@
 
     <RadioGroup
         android:id="@+id/colorButtons"
-        android:layout_width="259dp"
+        android:layout_width="wrap_content"
         android:layout_height="51dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="-4dp"
+        android:layout_marginStart="0dp"
         android:baselineAligned="true"
         android:orientation="horizontal"
         android:paddingLeft="-8dp"
         android:paddingRight="0dp"
         android:paddingTop="5dp"
+        android:weightSum="1"
         app:layout_constraintBottom_toTopOf="@+id/durationTv"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/endPointName"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/endPointName"
         app:layout_constraintVertical_bias="0.32"
-        tools:ignore="RtlHardcoded"
-        android:weightSum="1">
+        tools:ignore="RtlHardcoded">
 
         <RadioButton
             android:id="@+id/color_blue"
