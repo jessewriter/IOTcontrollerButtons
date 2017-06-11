@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
         radio = (RadioGroup) findViewById(R.id.colorButtons);
         frequencySeekBar = (SeekBar) findViewById(R.id.frequencySeekBar);
         frequencySeekBar.setOnSeekBarChangeListener(sliderControl);
