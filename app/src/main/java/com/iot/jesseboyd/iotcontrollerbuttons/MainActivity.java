@@ -230,11 +230,16 @@ public class MainActivity extends AppCompatActivity {
                 switch (index) {
                     case 0: // first button
                         ledColor = "blue";
-                        Toast.makeText(getApplicationContext(), "Selected button blue " + index, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Selected button blue ", Toast.LENGTH_SHORT).show();
                         break;
                     case 1: // secondbutton
                         ledColor = "red";
-                        Toast.makeText(getApplicationContext(), "Selected button red " + index, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Selected button red ", Toast.LENGTH_LONG).show();
+                        break;
+
+                    case 2: // thirdbutton
+                        ledColor = "white";
+                        Toast.makeText(getApplicationContext(), "Selected button white ", Toast.LENGTH_LONG).show();
                         break;
                 }
             }
@@ -243,10 +248,10 @@ public class MainActivity extends AppCompatActivity {
 
     private SeekBar.OnSeekBarChangeListener sliderControl = new
             SeekBar.OnSeekBarChangeListener() {
-                int freqProgress =0;
+
                 @Override
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                    freqProgress = progress;  // set frequency
+                    frequency = progress;  // set frequency
 
                 }
 
@@ -257,7 +262,7 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onStopTrackingTouch(SeekBar seekBar) {
-                    frequency = freqProgress;
+
                     Toast.makeText(getApplicationContext(), "slider value:  " + frequency, Toast.LENGTH_SHORT).show();
                     Log.d(tag, "on stop tracking touch = " + frequency);
                 }
