@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
     TextView etResponse;
     TextView tvIsConnected;
     TextView nameTv, durationTv;
-    String controllerId;
-    LedControllerBean ledController;
     RadioButton blueButton, redButton;
     ToggleButton isOn;
     Button updateJSONButton;
@@ -232,12 +230,12 @@ public class MainActivity extends AppCompatActivity {
                         ledColor = "blue";
                         Toast.makeText(getApplicationContext(), "Selected button blue ", Toast.LENGTH_SHORT).show();
                         break;
-                    case 1: // secondbutton
+                    case 1: // second button
                         ledColor = "red";
                         Toast.makeText(getApplicationContext(), "Selected button red ", Toast.LENGTH_LONG).show();
                         break;
 
-                    case 2: // thirdbutton
+                    case 2: // third button
                         ledColor = "white";
                         Toast.makeText(getApplicationContext(), "Selected button white ", Toast.LENGTH_LONG).show();
                         break;
