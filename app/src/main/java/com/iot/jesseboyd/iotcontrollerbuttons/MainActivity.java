@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         ////////// end Fab
     }
 
-    private void updateButtonAction() {
+    private boolean updateButtonAction() {
 // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, restUrl,
                 new Response.Listener<String>() {
@@ -142,21 +142,26 @@ public class MainActivity extends AppCompatActivity {
                         // Display the first 500 characters of the response string.
                         String addLineBreaks = response.replace(",", System.getProperty("line.separator"));
                         etResponse.setText("Response is: \n" + addLineBreaks);
+
+                            tvIsConnected.setBackgroundColor(0xFF00CC00);
+                            tvIsConnected.setText("database is conncted");
+
                     }
                 }, new com.android.volley.Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                etResponse.setText("That didn't work!");
+                etResponse.setText("database not connected try again!");
             }
         });
 // Add the request to the RequestQueue.
         queue.add(stringRequest);
+        return stringRequest.hasHadResponseDelivered();
     }
 
     public boolean isConnected() {
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Activity.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
+        if (networkInfo != null && networkInfo.isConnected() && updateButtonAction()) {
             return true;
         } else
             return false;
